@@ -5,10 +5,11 @@
 </head>
 <body>
 
+<h1>Linux Command Library</h1>
 <hr>
 <a href="../index.html">← Back to Home</a>
 
-<h1>One-liners</h1>
+<h2>One-liners</h2>
 
 <details>
   <summary>Run the previous command with sudo</summary>
@@ -96,6 +97,96 @@ command -v cmd >/dev/null && echo yes
   <pre>
     <code>
 cd -
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Create directory and cd into it</summary>
+  <pre>
+    <code>
+mkdir dir && cd dir
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Create 100 numbered directories</summary>
+  <pre>
+    <code>
+mkdir project{01..100}
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Quickly backup a file</summary>
+  <pre>
+    <code>
+cp file{,.bak}
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Empty/truncate a file</summary>
+  <pre>
+    <code>
+> file.txt
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Batch rename files</summary>
+  <pre>
+    <code>
+for f in *.txt; do mv "$f" "${f%.txt}.bak"; done
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Create symlink</summary>
+  <pre>
+    <code>
+ln -s target link
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show only directories</summary>
+  <pre>
+    <code>
+ls -d */
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>List files by modification time</summary>
+  <pre>
+    <code>
+ls -lt
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Count files in directory</summary>
+  <pre>
+    <code>
+ls | wc -l
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Tree view of directory</summary>
+  <pre>
+    <code>
+tree
     </code>
   </pre>
 </details>
