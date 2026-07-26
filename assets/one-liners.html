@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>One-liners</title>
+</head>
+<body>
+
+<h1>One-liners</h1>
+
+<details>
+  <summary>Run the previous command with sudo</summary>
+  <pre>
+    <code>
+sudo !!
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Repeat the last command</summary>
+  <pre>
+    <code>
+!!
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Fix typo in the previous command</summary>
+  <pre>
+    <code>
+^wrong^correct^
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Search command history interactively</summary>
+  <pre>
+    <code>
+Ctrl+R
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Edit current command line in your editor</summary>
+  <pre>
+    <code>
+Ctrl+X Ctrl+E
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Alias to repeat last command</summary>
+  <pre>
+    <code>
+alias r='fc -s'
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show most used commands</summary>
+  <pre>
+    <code>
+history | awk '{print $2}' | sort | uniq -c | sort -nr | head
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Reload shell configuration</summary>
+  <pre>
+    <code>
+source ~/.bashrc
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Check if command exists</summary>
+  <pre>
+    <code>
+command -v cmd >/dev/null && echo yes
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Change to the previous directory</summary>
+  <pre>
+    <code>
+cd -
+    </code>
+  </pre>
+</details>
+
+</body>
+</html>
