@@ -191,5 +191,77 @@ tree
   </pre>
 </details>
 
+<details>
+  <summary>Show file with line numbers</summary>
+  <pre>
+    <code>
+nl file.txt
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Count lines in a file</summary>
+  <pre>
+    <code>
+wc -l file.txt
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Remove duplicate lines</summary>
+  <pre>
+    <code>
+sort file | uniq
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Search and replace in files</summary>
+  <pre>
+    <code>
+sed -i 's/old/new/g' *.txt
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Grep recursively ignoring case</summary>
+  <pre>
+    <code>
+grep -ir "text" .
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Find files by name</summary>
+  <pre>
+    <code>
+find . -iname "*.log"
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Find files larger than 100MB</summary>
+  <pre>
+    <code>
+find . -type f -size +100M
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Delete files older than 30 days</summary>
+  <pre>
+    <code>
+find . -mtime +30 -delete
+    </code>
+  </pre>
+</details>
+
 </body>
 </html>
