@@ -263,5 +263,320 @@ find . -mtime +30 -delete
   </pre>
 </details>
 
+<details>
+  <summary>Find and delete empty directories</summary>
+  <pre>
+    <code>
+find . -type d -empty -delete
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Find broken symlinks</summary>
+  <pre>
+    <code>
+find . -xtype l
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Find largest files and directories</summary>
+  <pre>
+    <code>
+du -ah . | sort -hr | head -20
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show directory sizes sorted</summary>
+  <pre>
+    <code>
+du -sh * | sort -hr
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show disk usage in human-readable format</summary>
+  <pre>
+    <code>
+df -h
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Monitor file changes</summary>
+  <pre>
+    <code>
+tail -f logfile
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Watch command output refresh every 2 seconds</summary>
+  <pre>
+    <code>
+watch command
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Display clock in terminal</summary>
+  <pre>
+    <code>
+watch -n 1 date
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Create a tar.gz backup</summary>
+  <pre>
+    <code>
+tar czf backup.tar.gz directory/
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Extract a tar.gz archive</summary>
+  <pre>
+    <code>
+tar xzf archive.tar.gz
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Extract any archive format</summary>
+  <pre>
+    <code>
+atool -x archive
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Split large file</summary>
+  <pre>
+    <code>
+split -b 1G largefile part-
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Reassemble split files</summary>
+  <pre>
+    <code>
+cat part-* > largefile
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Check file checksum</summary>
+  <pre>
+    <code>
+sha256sum file
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Encrypt file with gpg</summary>
+  <pre>
+    <code>
+gpg -c file
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Generate random password</summary>
+  <pre>
+    <code>
+< /dev/urandom tr -dc A-Za-z0-9 | head -c 32; echo
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Copy with progress bar</summary>
+  <pre>
+    <code>
+rsync -ah --progress src dest
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Progress bar for any pipe</summary>
+  <pre>
+    <code>
+pv largefile | gzip > largefile.gz
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Create sparse 10GB file</summary>
+  <pre>
+    <code>
+truncate -s 10G file.img
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Convert DOS to Unix line endings</summary>
+  <pre>
+    <code>
+dos2unix file
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Pretty-print JSON from stdin</summary>
+  <pre>
+    <code>
+jq .
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Pretty-print XML</summary>
+  <pre>
+    <code>
+xmllint --format file.xml
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Pipe output to clipboard</summary>
+  <pre>
+    <code>
+command | xclip -sel clip
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Run command in background</summary>
+  <pre>
+    <code>
+command &
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Run detached from terminal</summary>
+  <pre>
+    <code>
+nohup command &
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Kill process by name</summary>
+  <pre>
+    <code>
+pkill process_name
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>View processes sorted by CPU</summary>
+  <pre>
+    <code>
+top
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Check system uptime</summary>
+  <pre>
+    <code>
+uptime
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>List cron jobs</summary>
+  <pre>
+    <code>
+crontab -l
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>List hardware info</summary>
+  <pre>
+    <code>
+lshw -short
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Monitor CPU temperature</summary>
+  <pre>
+    <code>
+sensors
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Check battery percentage</summary>
+  <pre>
+    <code>
+upower -i $(upower -e | grep BAT) | grep percentage
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show current timezone</summary>
+  <pre>
+    <code>
+timedatectl
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show calender</summary>
+  <pre>
+    <code>
+cal
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show previous, current, and next month</summary>
+  <pre>
+    <code>
+cal -3
+    </code>
+  </pre>
+</details>
+
 </body>
 </html>
