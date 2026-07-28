@@ -578,5 +578,322 @@ cal -3
   </pre>
 </details>
 
+<details>
+  <summary>Create RAM disk</summary>
+  <pre>
+    <code>
+mount -t tmpfs -o size=1G tmpfs /mnt/ram
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Disk speed test</summary>
+  <pre>
+    <code>
+dd if=/dev/zero of=test bs=1G count=1 oflag=dsync
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Burn ISO to USB</summary>
+  <pre>
+    <code>
+dd if=iso.iso of=/dev/sdX bs=4M status=progress
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Securely wipe drive</summary>
+  <pre>
+    <code>
+shred -v /dev/sdX
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Record terminal session</summary>
+  <pre>
+    <code>
+script --log-timing timing.log session.log
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Replay terminal session</summary>
+  <pre>
+    <code>
+scriptreplay --log-timing timing.log session.log
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Get your public IP address</summary>
+  <pre>
+    <code>
+curl ifconfig.me
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>List open network ports</summary>
+  <pre>
+    <code>
+ss -tuln
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Download file with resume</summary>
+  <pre>
+    <code>
+wget -c url
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Mount remote directory over SSH</summary>
+  <pre>
+    <code>
+sshfs user@host:/remote /local
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Spin up a local HTTP server</summary>
+  <pre>
+    <code>
+python3 -m http.server 8000
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Quick HTTP server in Ruby</summary>
+  <pre>
+    <code>
+ruby -run -e httpd . -p 8000
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Quick HTTP server in PHP</summary>
+  <pre>
+    <code>
+php -S localhost:8000
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Quick HTTP server in Node.js</summary>
+  <pre>
+    <code>
+npx http-server
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>One-liner web server in bash</summary>
+  <pre>
+    <code>
+while true; do echo -e "HTTP/1.1 200 OK$(date)" | nc -l 8080; done
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show weather in terminal</summary>
+  <pre>
+    <code>
+curl wttr.in
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Get full weather report</summary>
+  <pre>
+    <code>
+curl v2.wttr.in
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Generate QR code</summary>
+  <pre>
+    <code>
+qrencode -t ANSI "text"
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Download YouTube video</summary>
+  <pre>
+    <code>
+yt-dlp url
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Play YouTube video in terminal</summary>
+  <pre>
+    <code>
+mpv url
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Play a video in terminal as ASCII</summary>
+  <pre>
+    <code>
+mplayer -vo caca video.mp4
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Convert image to different format</summary>
+  <pre>
+    <code>
+convert input.jpg output.png
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Create animated GIF from images</summary>
+  <pre>
+    <code>
+convert -delay 10 -loop 0 *.png animation.gif
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Convert video to GIF</summary>
+  <pre>
+    <code>
+ffmpeg -i input.mp4 output.gif
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Merge multiple PDFs</summary>
+  <pre>
+    <code>
+gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=out.pdf in1.pdf in2.pdf
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>View PDF in terminal</summary>
+  <pre>
+    <code>
+pdftotext file.pdf - | less
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show current git branch</summary>
+  <pre>
+    <code>
+git branch --show-current
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Show git status nicely</summary>
+  <pre>
+    <code>
+git status -sb
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Display system info with ASCII art</summary>
+  <pre>
+    <code>
+neofetch
+screenfetch
+fastfetch
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Display fortune and cow</summary>
+  <pre>
+    <code>
+fortune | cowsay
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Rainbow text</summary>
+  <pre>
+    <code>
+echo "text" | lolcat
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Simulate slow typing</summary>
+  <pre>
+    <code>
+echo "text" | pv -qL 10
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Matrix digital rain</summary>
+  <pre>
+    <code>
+cmatrix
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Run the train animation</summary>
+  <pre>
+    <code>
+sl
+    </code>
+  </pre>
+</details>
+
+<details>
+  <summary>Play beep</summary>
+  <pre>
+    <code>
+echo -e "\a"
+    </code>
+  </pre>
+</details>
+
 </body>
 </html>
